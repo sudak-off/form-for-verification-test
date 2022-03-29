@@ -1,1 +1,1 @@
-Stack: ReactJS,
+Stack: ReactJS
