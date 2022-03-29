@@ -1,0 +1,109 @@
+.toggle-button {
+	position: relative;
+	width: 200px;
+}
+
+.toggle-button__switch {
+	font-family: Geometria;
+	cursor: pointer;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.toggle-button *,
+.toggle-button *:before,
+.toggle-button *:after {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.toggle-button input[type="checkbox"] {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.toggle-button
+	input[type="checkbox"]:checked
+	~ label
+	.toggle-button__switch:before {
+	content: attr(data-unchecked);
+	left: 0;
+}
+.toggle-button
+	input[type="checkbox"]:checked
+	~ label
+	.toggle-button__switch:after {
+	content: attr(data-checked);
+}
+
+.toggle-button label .toggle-button__switch:before {
+	content: attr(data-checked);
+	position: absolute;
+	top: 0;
+	text-align: center;
+}
+.toggle-button label .toggle-button__switch:after {
+	content: attr(data-unchecked);
+	position: absolute;
+	z-index: 5;
+	text-align: center;
+	background: white;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.toggle-button label .toggle-button__switch:before {
+	color: white;
+}
+.toggle-button
+	input[type="checkbox"]:checked
+	~ label
+	.toggle-button__switch:after {
+	-webkit-transform: translate3d(98px, 0, 0);
+	transform: translate3d(98px, 0, 0);
+}
+.toggle-button label {
+	font-size: 14px;
+}
+.toggle-button label .toggle-button__switch {
+	height: 30px;
+	-webkit-flex: 0 0 200px;
+	-ms-flex: 0 0 200px;
+	flex: 0 0 200px;
+	border-radius: 4px;
+}
+.toggle-button label .toggle-button__switch:before {
+	left: 100px;
+	font-size: 12px;
+	line-height: 30px;
+	width: 100px;
+	padding: 0 12px;
+}
+.toggle-button label .toggle-button__switch:after {
+	top: 2px;
+	left: 2px;
+	border-radius: 2px;
+	width: 98px;
+	line-height: 26px;
+	font-size: 12px;
+}
+
+.toggle-button.rect-button label .can-toggle__label-text {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+.toggle-button.rect-button label .toggle-button__switch {
+	-webkit-transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
+	background: #454d77;
+}
+.toggle-button.rect-button label .toggle-button__switch:after {
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+	color: #454d77;
+}

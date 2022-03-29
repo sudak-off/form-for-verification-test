@@ -1,0 +1,15 @@
+.title {
+	font-family: Gilroy-ExtraBold;
+	text-align: center;
+	margin-top: 40px;
+	color: #363b5d;
+	font-size: 45px;
+}
+
+.title__sub {
+	font-family: Geometria-Light;
+	margin-top: 5px;
+	text-align: center;
+	color: #363b5d;
+	font-size: 12px;
+}

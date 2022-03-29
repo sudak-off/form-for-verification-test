@@ -1,0 +1,56 @@
+.form-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	margin-top: 40px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+	width: 40%;
+}
+
+.form-control input {
+	box-sizing: border-box;
+	width: 100%;
+	height: 40px;
+	padding: 7px 10px;
+	font-size: 15px;
+	background-color: #f3f7fa;
+	border: none;
+	border-radius: 3px;
+}
+
+.form-control {
+	position: relative;
+}
+
+.extra-text {
+	position: absolute;
+	display: inline-block;
+	font-family: Geometria-Bold;
+	font-size: 12px;
+	top: 50%;
+	color: #2d5fa1;
+	left: 105%;
+}
+
+.form-control input:focus {
+	outline: none;
+}
+
+.custom-field::after {
+	content: attr(aria-label);
+}
+
+@media (max-width: 800px) {
+	.form-wrapper {
+		flex-direction: column;
+	}
+	.form-group {
+		width: 100%;
+	}
+}

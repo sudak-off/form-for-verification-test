@@ -1,0 +1,37 @@
+.gradient_button {
+	width: 200px;
+	height: 40px;
+	/* background: linear-gradient(90deg, rgba(218,70,89,1) 0%, rgba(182,82,114,1) 50%, rgba(135,109,170,1) 100%); */
+	background: linear-gradient(
+		90deg,
+		rgba(229, 54, 86, 1) 0%,
+		rgba(195, 74, 120, 1) 50%,
+		rgba(138, 105, 174, 1) 100%
+	);
+	border: none;
+	cursor: pointer;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-family: Geometria-Bold;
+	font-size: 14px;
+	box-shadow: 2px 6px 20px rgba(255, 72, 112, 0.35);
+	border-radius: 7px;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.gradient_button_wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.gradient_button:hover {
+	transform: translateY(-6px);
+}
+
+.gradient_button:focus {
+	outline: none;
+}
